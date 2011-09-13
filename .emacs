@@ -35,6 +35,27 @@
 (require 'linum)
 (global-linum-mode)   ;; Will force linum to turn on
 
+;; Python mode stuff
+(autoload 'python-mode "python-mode" "Major mode for editing Python code." t)
+(add-to-list 'auto-mode-alist '("\\.py[i]?\\'" . python-mode))
+
+
+(add-hook 'python-mode-hook '(lambda () 
+     (define-key python-mode-map "\C-m" 'newline-and-indent)))
+
+;;; Electric Pairs
+(add-hook 'python-mode-hook
+     (lambda ()
+      (define-key python-mode-map "\"" 'electric-pair)
+      (define-key python-mode-map "\'" 'electric-pair)
+      (define-key python-mode-map "(" 'electric-pair)
+      (define-key python-mode-map "[" 'electric-pair)
+      (define-key python-mode-map "{" 'electric-pair)))
+(defun electric-pair ()
+  "Insert character pair without sournding spaces"
+  (interactive)
+  (let (parens-require-spaces)
+    (insert-pair)))
 
 ;; For zenburn color scheme
 (require 'zenburn)
