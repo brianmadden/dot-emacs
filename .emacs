@@ -24,8 +24,8 @@
 (load "~/.emacs.d/linum-22.el")
 
 ;; For C/C++
-(add-to-list 'auto-mode-alist '("\\.c[i]?\\'" . textmate-mode))
-(add-to-list 'auto-mode-alist '("\\.h[i]?\\'" . textmate-mode))
+(add-to-list 'auto-mode-alist '("\\.c[c|pp]?\\'" . textmate-mode))
+(add-to-list 'auto-mode-alist '("\\.h\\'" . textmate-mode))
 
 
 ;; For D mode
@@ -35,7 +35,7 @@
 
 ;; For PHP mode
 (autoload 'php-mode "php-mode" "Major mode for editing PHP code." t)
-(add-to-list 'auto-mode-alist '("\\.php[i]?\\'" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
 
 ;; For left hand line numbers
 (require 'linum)
@@ -43,8 +43,8 @@
 
 ;; Python mode stuff
 (autoload 'python-mode "python-mode" "Major mode for editing Python code." t)
-(add-to-list 'auto-mode-alist '("\\.py[i]?\\'" . python-mode))
-(add-to-list 'auto-mode-alist '("\\.py[i]?\\'" . textmate-mode))
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.py\\'" . textmate-mode))
 
 (add-hook 'python-mode-hook '(lambda () 
      (define-key python-mode-map "\C-m" 'newline-and-indent)))
