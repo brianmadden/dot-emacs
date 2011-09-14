@@ -19,49 +19,17 @@
 
 
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/python-mode")
 
 (load "~/.emacs.d/zenburn.el")
 (load "~/.emacs.d/linum-22.el")
 
-;; For C/C++
-(add-to-list 'auto-mode-alist '("\\.c[c|pp]?\\'" . textmate-mode))
-(add-to-list 'auto-mode-alist '("\\.h\\'" . textmate-mode))
-
-
-;; For D mode
-(autoload 'd-mode "d-mode" "Major mode for editing D code." t)
-(add-to-list 'auto-mode-alist '("\\.d[i]?\\'" . d-mode))
-(add-to-list 'auto-mode-alist '("\\.d[i]?\\'" . textmate-mode))
-
-;; For PHP mode
-(autoload 'php-mode "php-mode" "Major mode for editing PHP code." t)
-(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+(require 'autopair)
+(autopair-global-mode) ;; enable autopair in all buffers 
 
 ;; For left hand line numbers
 (require 'linum)
 (global-linum-mode)   ;; Will force linum to turn on
-
-;; Python mode stuff
-(autoload 'python-mode "python-mode" "Major mode for editing Python code." t)
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-(add-to-list 'auto-mode-alist '("\\.py\\'" . textmate-mode))
-
-(add-hook 'python-mode-hook '(lambda () 
-     (define-key python-mode-map "\C-m" 'newline-and-indent)))
-
-;;; Electric Pairs
-;(add-hook 'python-mode-hook
-;     (lambda ()
-;      (define-key python-mode-map "\"" 'electric-pair)
-;      (define-key python-mode-map "\'" 'electric-pair)
-;      (define-key python-mode-map "(" 'electric-pair)
-;      (define-key python-mode-map "[" 'electric-pair)
-;      (define-key python-mode-map "{" 'electric-pair)))
-;(defun electric-pair ()
-;  "Insert character pair without sournding spaces"
-;  (interactive)
-;  (let (parens-require-spaces)
-;    (insert-pair)))
 
 ;; For zenburn color scheme
 (require 'zenburn)
@@ -69,5 +37,25 @@
 (global-font-lock-mode t)
 (unless (zenburn-format-spec-works-p)
   (zenburn-define-format-spec))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;; MODES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; For C/C++
+(add-to-list 'auto-mode-alist '("\\.cc\\'" . c++-mode))
+
+;; For D mode
+(autoload 'd-mode "d-mode" "Major mode for editing D code." t)
+(add-to-list 'auto-mode-alist '("\\.d[i]?\\'" . d-mode))
+
+;; For PHP mode
+(autoload 'php-mode "php-mode" "Major mode for editing PHP code." t)
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+
+;; Python mode stuff
+(autoload 'python-mode "python-mode" "Major mode for editing Python code." t)
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+
+
 
 
