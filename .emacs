@@ -41,6 +41,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;; MODES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; For Scala mode
+(let ((path "~/.emacs.d/scala"))
+  (setq load-path (cons path load-path))
+  (load "scala-mode-auto.el"))
+
 ;; For C/C++
 (add-to-list 'auto-mode-alist '("\\.cc\\'" . c++-mode))
 
@@ -56,6 +61,11 @@
 (autoload 'python-mode "python-mode" "Major mode for editing Python code." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
+;; For haskell mode
+(load "~/.emacs.d/haskell-mode-2.8.0/haskell-site-file")
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(add-to-list 'auto-mode-alist '("\\.hs[i]?\\'" . haskell-mode))
 
 
 
