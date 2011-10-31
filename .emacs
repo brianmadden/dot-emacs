@@ -18,6 +18,9 @@
  '(linum ((t (:inherit shadow :foreground "light gray")))))
 
 
+(column-number-mode)
+(display-time-mode)
+
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/python-mode")
 
@@ -28,8 +31,8 @@
 (autopair-global-mode) ;; enable autopair in all buffers 
 
 ;; For left hand line numbers
-(require 'linum)
-(global-linum-mode)   ;; Will force linum to turn on
+;;(require 'linum)
+;;(global-linum-mode)   ;; Will force linum to turn on
 
 ;; For zenburn color scheme
 (require 'zenburn)

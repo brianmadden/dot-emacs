@@ -2,22 +2,25 @@
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["scp" "maddeb" "maddeb-dl" nil]
-  ("uname" "Linux 2.6.17-1.2142_FC4smp")
+((["scpc" "uber_ware" "uber-ware.com" nil]
+  ("uname" "Linux 2.6.32.8-grsec-2.1.14-modsign-xeon-64")
   ("remote-path"
    ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
   ("remote-shell" "/bin/sh")
-  ("perl-file-spec" t)
-  ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 223020)
   ("test" "test")
   ("file-exists" "test -e")
   ("stat" "\\stat")
-  ("id" "/usr/bin/id")
-  ("uid-integer" 596)
-  ("gid-integer" 596)
+  ("uid-integer" 849320)
+  ("readlink" "\\readlink")
   ("local-encoding" base64-encode-region)
   ("local-decoding" base64-decode-region)
-  ("remote-encoding" tramp-perl-encode-with-module)
-  ("remote-decoding" tramp-perl-decode-with-module)
-  ("readlink" nil)))
+  ("remote-encoding" "base64")
+  ("remote-decoding" "base64 -d -i")
+  ("inline-compress" "gzip")
+  ("inline-decompress" "gzip -d")
+  ("~" "/home/uber_ware")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")))
