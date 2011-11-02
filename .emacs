@@ -4,7 +4,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(gud-gdb-command-name "gdb --annotate=1")
- '(initial-buffer-choice t)
+ ;'(initial-buffer-choice t)
  '(large-file-warning-threshold nil)
  '(paren-match-face (quote paren-face-match-light))
  '(paren-sexp-mode t)
