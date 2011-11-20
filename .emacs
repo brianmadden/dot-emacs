@@ -24,9 +24,6 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/python-mode")
 
-(load "~/.emacs.d/zenburn.el")
-(load "~/.emacs.d/linum-22.el")
-
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers 
 
@@ -35,11 +32,10 @@
 ;;(global-linum-mode)   ;; Will force linum to turn on
 
 ;; For zenburn color scheme
-(require 'zenburn)
+(require 'color-theme-zenburn)
 (color-theme-zenburn)
 (global-font-lock-mode t)
-(unless (zenburn-format-spec-works-p)
-  (zenburn-define-format-spec))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;; MODES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
