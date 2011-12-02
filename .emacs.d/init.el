@@ -1,13 +1,4 @@
-;; Load this stuff only when the version is emacs 23 or lower
 
-(if (<= emacs-major-version 23)
-    (
-     (add-to-list 'load-path "~/.emacs.d/python-mode")
-     (require 'autopair) 
-     (autopair-global-mode) ;; enable autopair in all buffers 
-    )
-)
-     
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -20,18 +11,26 @@
  '(paren-sexp-mode t)
  '(tool-bar-mode nil)
  '(transient-mark-mode (quote identity)))
-(custom-set-faces
+;;(custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(linum ((t (:inherit shadow :foreground "light gray")))))
+;; '(linum ((t (:inherit shadow :foreground "light gray")))))
 
 (column-number-mode)
 (display-time-mode)
 
-
 (add-to-list 'load-path "~/.emacs.d")
+
+;; Load this stuff only when the version is emacs 23 or lower
+;;(if (<= emacs-major-version 23)
+;;    (
+     (add-to-list 'load-path "~/.emacs.d/python-mode")
+     (require 'autopair) 
+     (autopair-global-mode) ;; enable autopair in all buffers 
+;;    )
+;;)
 
 ;; For left hand line numbers
 ;;(require 'linum)
