@@ -73,5 +73,5 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-to-list 'auto-mode-alist '("\\.hs[i]?\\'" . haskell-mode))
 
-
-
+;; Flyspell in latex mode
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
