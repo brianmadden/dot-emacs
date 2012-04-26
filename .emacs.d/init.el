@@ -44,6 +44,17 @@
 ; Tabs
 (setq default-tab-width 4)
 
+(defun load-ropemacs ()
+  "Load pymacs and ropemacs"
+  (interactive)
+  (require 'pymacs)
+  (pymacs-load "ropemacs" "rope-")
+  ;; Automatically save project python buffers before refactorings
+  (setq ropemacs-confirm-saving 'nil)
+)
+
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;; MODES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -74,4 +85,4 @@
 (add-to-list 'auto-mode-alist '("\\.hs[i]?\\'" . haskell-mode))
 
 ;; Flyspell in latex mode
-(add-hook 'LaTeX-mode-hook 'flyspell-mode)
+;(add-hook 'LaTeX-mode-hook 'flyspell-mode)
