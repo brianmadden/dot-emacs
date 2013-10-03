@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <12/04/27 11:33:25 /Users/untwisted/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <13/09/30 12:14:02 /Users/untwisted/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -90,4 +90,24 @@
   ("inline-compress" "gzip")
   ("inline-decompress" "gzip -d")
   ("ls" "/bin/ls --color=never")
-  ("uid-integer" 517)))
+  ("uid-integer" 517))
+ (["scpc" "uber_ware" "uber-ware.com" nil nil]
+  ("uname" "Linux 2.6.32.45-grsec-2.2.2-r3")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("~" "/home/uber_ware")
+  ("readlink" "\\readlink")
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 223020)
+  ("uid-integer" 849320)
+  ("ls" "/bin/ls --color=never"))
+ (["scpc" "maddeb" "clidev01.asl.lab.emc.com" nil nil]
+  nil))
